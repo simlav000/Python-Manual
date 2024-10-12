@@ -435,3 +435,5 @@ print("21: ", I_am_human or its_raining_sharks) # True
 # Though you should probably use the is_even_for_real_this_time() function.
 def challenge(x, y, z):
     return "Implement your answer here"
+
+# 2. Draw the truth table for P AND Q.
