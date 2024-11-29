@@ -19,7 +19,6 @@ print(ord("A")) #65
 
 print(ord("$")) #36
 # Other characters have their own codes.
-# This only works for strings of one character
 
 # To go the other way around, we use the chr() function.
 
@@ -35,11 +34,11 @@ def ASCII_shifter(s):
         code = code - 3
         result = result + chr(code)
     return result
-print(ASCII_shifter("Python"))
+print(ASCII_shifter("Secret (Shh)"))
 
 # You can think of the above function as a little cypher you can use to mask
 # text. All you have to do is write a function that shifts the characters back
-# three spots and voila! A decrypted message. I leave that to you :P 
+# three spots and voila! A decrypted message. I leave that to you.
 
 #####################
 # ESCAPE CHARACTERS #
@@ -48,32 +47,16 @@ print(ASCII_shifter("Python"))
 # There are special characters that we sometimes deal with.
     # \n: The newline character: Printed when we press the "enter" key.
     # \t: The tab character: Printed when we press the "tab" key.
-# Such special characters can be used in Python using escape characters. To
-# include a newline character in a string we can use the escape character "\n"
-# in the string:
-message = "hello\nworld"
-print(message)
+    # \r: Carriage return: If I ever use it I'll tell you what it does.
 
-# \n is stored as a single character even though it looks like two
-print(ord("\n")) #10
+# Escaping is more general than just these two characters. As foreshadowed
+# in chapter 10 (2 in binary), placing a backslash (\) in front of a character
+# neutralizes its abilities.
 
-# Another escape character is \t which represents the tab character.
-# It is useful as a separator when displaying values:
-# print uses space as separator by default
-print("Joe", 85)
-print("Mama", 90)
+# Consider the task of using apostrophes and quotes in a string.
+# We need to pick one flavour of quote to surround the string ("") or ('').
+# We can prevent a quotation mark in our string from terminating it early:
+"This will supposedly \"prevent and error\" from occuring"
 
-# Escaping is more general that just these two characters. Escaping is actually 
-# the practice of placing a backslash (\) in front of a character so that it 
-# does not get interpreted in any special way. Consider an example from a 
-# previous lecture:
-
-kind_message = 'no'
-# I was not able to place an apostrophe in "I'm" because the single-quote 
-# character (') is ascribed the special meaning of containing the string. 
-# We can use the escape character (\) to tell python not to interpret the 
-# single-quote as a special character and treat it as a normal character, 
-# allowing the single-quote to "escape" from its duties.
-kind_message = 'burh'
-print(kind_message)
-# Now, the kind message is also properly punctuated.
+# We can also properly punctuate a phrase contained in single quotes
+'Look mom I\'m not crashing!'
