@@ -170,14 +170,14 @@ x = y
 # examples: https://medium.com/@thoashook/operations-in-python-69bbbef781a4
 
 # Generally however, you don't need to memorize this.
-# I've not spoken much about this yet, but an immensely important facet of
-# programming is writing code that other people can actually read. The order of
-# operations from one programming language to another may or may not be the
-# same, but one thing is true for all of them: parentheses () are king.
+# An immensely important facet of programming is writing code that other people
+# can actually read.
+
+# The order of operations from one programming language to another may or may not
+# be the same, but one thing is true for all of them: parentheses () are king.
 
 # This means that instead of writing some garbage like "x = 12 //4 + 2 **4–5"
-# where only a Python developper who remembers the precedence of all operators
-# can understand, use parentheses to make clear what you are trying to do
+# use parentheses to make clear what you are trying to do.
 
 x = (12 // 4) + (2 ** 4) - 5
 print(x)
