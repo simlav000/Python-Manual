@@ -157,5 +157,30 @@ x = y
 # recommend you write a few lines of code trying to use these operators, assign
 # them to variables, print the results, maybe use the operators in the print
 # function itself, tinker around! It's the best way to learn.
+
+
+#####################################################################
+# ORDER OF OPERATIONS - PEMDAS (Please Excuse My Dark Ambient Swag) #
+#####################################################################
+
+# When an expression contains multiple operators, which one is applied first?
+# All Python operators have some hierarchy.
+
+# The following web page contains a handy table listing the hierarchy with some
+# examples: https://medium.com/@thoashook/operations-in-python-69bbbef781a4
+
+# Generally however, you don't need to memorize this.
+# I've not spoken much about this yet, but an immensely important facet of
+# programming is writing code that other people can actually read. The order of
+# operations from one programming language to another may or may not be the
+# same, but one thing is true for all of them: parentheses () are king.
+
+# This means that instead of writing some garbage like "x = 12 //4 + 2 **4–5"
+# where only a Python developper who remembers the precedence of all operators
+# can understand, use parentheses to make clear what you are trying to do
+
+x = (12 // 4) + (2 ** 4) - 5
+print(x)
+
     
         
