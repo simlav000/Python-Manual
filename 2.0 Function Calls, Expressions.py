@@ -140,9 +140,9 @@ print("I will purchase ", number * 2, " explosives from the explosives store")
 # You can "disable" lines of code by slapping a hashtag at the beginnning of
 # the line.
 
-####################################################################
-# ORDER OF OPERATIONS - PEMDAS (Please Excuse My Dark Ambient Swag #
-####################################################################
+#####################################################################
+# ORDER OF OPERATIONS - PEMDAS (Please Excuse My Dark Ambient Swag) #
+#####################################################################
 
 # When an expression contains multiple operators, which one is applied first?
 # All Python operators have a PRECEDENCE and ASSOCIATIVITY:
