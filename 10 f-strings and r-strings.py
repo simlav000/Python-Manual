@@ -45,16 +45,15 @@ print(f_string)
 fname = "\home\usr\Simon\Music\MoBambda.flac"
 
 # and then when you use fname in some function that knows how to open files,
-# things won't work. Why? Because apprently the slashes cause some problems. It
-# has something to do with slashes having some special meaning. I don't really
-# know tbh. What I do know is that you have two options to solve this common
-# problem.
+# things won't work. Why? Because the slashes cause some problems. It has
+# something to do with slashes having some special power, we'll get to it. 
+# What I'll focus on now is how to get over this hurdle.
 
 # 1. Escape your slashes
 fname = "\\home\\usr\\Simon\\Music\\MoBamba.flac"
-# this amounts to doubling up your slashes which is like some form of
-# instruction to python to ignore any special meaning it has for slashes and
-# just take them as they are
+# This amounts to doubling up your slashes which is the universal way to siphon
+# the power contained within gifted characters.
+
 
 # 2. Slap a funny "r" out front
 fname = r"\home\usr\Simon\Music\MoBamba.flac"
@@ -63,3 +62,10 @@ fname = r"\home\usr\Simon\Music\MoBamba.flac"
 # simply copy-pasted your file path into python and don't want to manually add
 # slashes. I think the r stands for raw but don't quote me on that. You can
 # double up on r and f out front a string to get all those features!
+
+#####################
+# ESCAPE CHARACTERS #
+#####################
+# TODO: If you're reading this, email me and tell me to do this. 
+
+# Email is in chapter zero.
