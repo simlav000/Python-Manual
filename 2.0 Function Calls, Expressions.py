@@ -13,25 +13,24 @@
 # When it comes to built-in functions, it is often required to read
 # documentation to know how a function is expected to be used. Here's a handy
 # page which lists all the basic built-in Python functions:
-# https://docs.python.org/3/library/functions.html The following are a few of
-# the built-ins available in Python
+# https://docs.python.org/3/library/functions.html
+# We'll be listing a good few of them here. But first...
 
 ##############################
 # KEYWORD ARGUMENTS (KWARGS) #
 ##############################
 
-# Functions in Python can have what we call "Keyword arguments". They are
-# like normal arguments we give to functions, but they already have a special
-# name associated with them. This means we need to know their names to use them
-# in the first place, meaning we must RTFM (read the fucking manual). The 
-# familiar print() function has a special keyword argument called "sep", which
-# specifies the separation between things it is printing. Using " uhh " as
-# separator:
+# Functions in Python can have what we call "Keyword arguments" (KWARGS). They
+# are like normal arguments we give to functions, but they already have a 
+# special name associated with them. This means we need to know their names to 
+# use them in the first place, so we have to "read documentation". 
 
-print("I", "know", "how", "to" ,"do", "CPR", sep=" uhh ")
+# The familiar print() function has a special keyword argument called "sep",
+# which specifies the separation between things it is printing. 
+print("time", "money", sep=" = ")
 
 # Keyword arguments must always come after the regular arguments (which we call
-# positional arguments). They are sometimes optional, in which case they are 
+# positional arguments). KWARGS are sometimes optional, in which case they are 
 # designed to have an implicit default value. It is again up to you to read up
 # on what these defaults are, but I'll show you a few of them.
 
@@ -56,19 +55,18 @@ print(9, end=", ")
 print(end="\n")
 print()
 
-print(end="\n")
-
-##########
-# type() #
-##########
-# We've seen this one already.
+##################################
+# OTHER PYTHON LIBRARY FUNCTIONS #
+##################################
 
 ###########
 # input() #
 ###########
-# We use input() function to ask for input data from the keyboard.
+# We use the input() function to ask for input data from the keyboard.
 
-# input(prompt): Displays the prompt string and waits for the user to enter one
+# input(prompt):
+# prompt is a string. 
+# Displays the prompt string and waits for the user to enter one
 # line of input text in the terminal. The remaining code will not run until
 # this input is entered. The function returns the text entered by user as a
 # string, which can be stored in a variable.
@@ -77,11 +75,17 @@ number = input("Entrust me with you credit card number: ")
 # Notice how input returns something, and we can catch it with the number
 # variable.
 
-# We have to be careful not to run away with this number as it isn't a true number
-# just yet. It's a string. Users can only ever give us strings. It is our
-# responsibility to interpret this is a number.
+# We have to be careful not to run away with this number as it isn't a true
+# number just yet. It's a string. Users can only ever give us strings. It is
+# our responsibility to interpret this is a number.
 
-number = int(number)
+try:
+    number = int(number)
+except Exception as thats_not_a_number:
+    print("Hey! Why don't you trust me???")
+
+# As you can tell it takes quite some machinery to make taking input not crash
+# our program.
 
 print(f"Current Bank Balance: {number * -4}.00 $")
 
@@ -125,8 +129,8 @@ print(float(price))
 
 # Convert to string using str()
 age = 23
-sex = 69.69
-print(str(age), str(sex))
+teeth = 31.5
+print(str(age), str(teeth))
 # Works on both ints and floats!
 # In the previous lecture, we had tried to call len(1234) which didn't work since
 # len() wants a string. If you wanted to count the number of digits in some number,
@@ -137,9 +141,9 @@ print(str(age), str(sex))
 # FUNCTION COMPOSITION #
 ########################
 
-# We have breifly touched on this topic when printing the type of a variable.
-# Function composition is applying or calling one function with the result of
-# another. Consider the following two examples:
+# I just did this. That's what len(str(1234)) is. Function composition is applying
+# or calling one function with the result of another. It can make things more 
+# concise. Here are more examples:
 
 # Using intermediate variables
 x = -5
@@ -155,9 +159,10 @@ y = -8
 z = min(abs(x), abs(y))
 print(x, y, z)
 
-# We can use function composition to simplify the above percocets code
-number = int(input("Credit card number again hurry now: "))
-print(fr"""Current Bank Balance: {number * 1200}.00 $ 
+# We often do this when we want a number as input
+try:
+    number = int(input("Credit card number again hurry now: "))
+    print(fr"""Current Bank Balance: {number * 1200}.00 $ 
     /$$$$$  /$$$$$$   /$$$$$$  /$$   /$$ /$$$$$$$   /$$$$$$  /$$$$$$$$
    |__  $$ /$$__  $$ /$$__  $$| $$  /$$/| $$__  $$ /$$__  $$|__  $$__/
       | $$| $$  \ $$| $$  \__/| $$ /$$/ | $$  \ $$| $$  \ $$   | $$
@@ -167,6 +172,19 @@ print(fr"""Current Bank Balance: {number * 1200}.00 $
 |  $$$$$$/| $$  | $$|  $$$$$$/| $$ \  $$| $$      |  $$$$$$/   | $$
  \______/ |__/  |__/ \______/ |__/  \__/|__/       \______/    |__/
 """)
+except Exception as thats_not_a_number:
+    print("""Too bad, you would've won the
+    /$$$$$  /$$$$$$   /$$$$$$  /$$   /$$ /$$$$$$$   /$$$$$$  /$$$$$$$$
+   |__  $$ /$$__  $$ /$$__  $$| $$  /$$/| $$__  $$ /$$__  $$|__  $$__/
+      | $$| $$  \ $$| $$  \__/| $$ /$$/ | $$  \ $$| $$  \ $$   | $$
+      | $$| $$$$$$$$| $$      | $$$$$/  | $$$$$$$/| $$  | $$   | $$
+ /$$  | $$| $$__  $$| $$      | $$  $$  | $$____/ | $$  | $$   | $$
+| $$  | $$| $$  | $$| $$    $$| $$\  $$ | $$      | $$  | $$   | $$
+|  $$$$$$/| $$  | $$|  $$$$$$/| $$ \  $$| $$      |  $$$$$$/   | $$
+ \______/ |__/  |__/ \______/ |__/  \__/|__/       \______/    |__/
+""")
+    
+
 
 # This will only work if we trust our user enough to actually input an int!
 # Otherwise this all goes to shit, since we have already seen that the int
