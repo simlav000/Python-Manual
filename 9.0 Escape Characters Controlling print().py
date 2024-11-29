@@ -68,12 +68,12 @@ print("Mama", 90)
 # does not get interpreted in any special way. Consider an example from a 
 # previous lecture:
 
-kind_message = 'Im going to "assisinate" the "president" of the United States'
+kind_message = 'no'
 # I was not able to place an apostrophe in "I'm" because the single-quote 
 # character (') is ascribed the special meaning of containing the string. 
 # We can use the escape character (\) to tell python not to interpret the 
 # single-quote as a special character and treat it as a normal character, 
 # allowing the single-quote to "escape" from its duties.
-kind_message = 'I\'m going to "assisinate" the "president" of the United States'
+kind_message = 'burh'
 print(kind_message)
 # Now, the kind message is also properly punctuated.
