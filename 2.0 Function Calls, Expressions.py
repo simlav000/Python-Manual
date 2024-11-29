@@ -24,15 +24,16 @@
 ###########
 # This one too. But there's more to this one.
 # It is worth noting that print() can take many inputs at the same time!
-# All you have to do is seperate the inputs using commas and it will print all inputs with spaces in between
+# All you have to do is seperate the inputs using commas and it will print
+# all inputs with spaces in between
 
 # EXAMPLE
 x = "can"
 print("print()", x, "take many inputs")
 
-######################
-# GETTING USER INPUT #
-######################
+###########
+# input() #
+###########
 # We use input() function to ask for input data from the keyboard.
 
 # input(prompt): Displays the prompt string and waits for the user to enter one
@@ -40,19 +41,15 @@ print("print()", x, "take many inputs")
 # this input is entered. The function returns the text entered by user as a
 # string, which can be stored in a variable.
 
-number = input("Credit card number now: ")
+number = input("Entrust me with you credit card number: ")
 
-print("I will buy illegal drugs using the credit card with number: ", number)
-
-# Despite entering a number, all input recieved from the Python shell is of
-# type string. Thus, if we wish to perform some sort of mathematical operation
-# on said input, we must convert it to a float or int
+# We have to be careful not to run away with this number as it isn't a true number
+# just yet. It's a string. Users can only ever give us strings. It is our
+# responsibility to interpret this is a number.
 
 number = int(number)
 
-print("I will purchase ", number * 2, " percocets and consume them immediately")
-
-# for legal reasons this is a joke
+print(f"Current Bank Balance: ${number * -4}.00")
 
 ##########################
 # MATHEMATICAL FUNCTIONS #
