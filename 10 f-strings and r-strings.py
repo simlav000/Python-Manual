@@ -66,6 +66,5 @@ fname = r"\home\usr\Simon\Music\MoBamba.flac"
 #####################
 # GIFTED CHARACTERS #
 #####################
-# TODO: If you're reading this, email me and tell me to do this. 
-
-# Email is in chapter zero.
+# See chapter 9. It's not in chapter 9 because it's hard or anything. It's 
+# just that it isn't urgent.
