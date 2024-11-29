@@ -42,20 +42,50 @@ print(type(b))
 'everyone!'
 
 # Double quotes can be placed in single quotes
-'Im going to "assassinate" the "president" of the United States of America'
-# ^ Can't put an apostrophe here or else Python won't know when the string ends
+'So that its possible to "use them,"'
+         # ^ *
 
-"With a 'mortar launcher'" # and vice versa.
-# For legal reasons this is a joke
+"and singles can be used in doubles to use apostrophies like I'm doin' 'ere." # and vice versa.
+
+# * : Can't put an apostrophe here or else Python will terminate the string early and you'll be 
+# left with a SyntaxError. Your code edit can helps you avoid these mistakes thanks to the color
+# difference between strings and variable names.
 
 '123' # this is a string, not a number!
 
-"" # this is an empty string (hence zero characters)
+"" # this is an empty string (zero characters long!)
 
 # A multi-line string using triple quotes
-"""I'm going to assassinate the president of the United States of America
-with a mortar launcher"""
-# For legal reasons this is a joke
+"""
+
+          .?77777777777777$.            
+          777..777777777777$+           
+         .77    7777777777$$$           
+         .777 .7777777777$$$$           
+         .7777777777777$$$$$$           
+         ..........:77$$$$$$$           
+  .77777777777777777$$$$$$$$$.=======.  
+ 777777777777777777$$$$$$$$$$.========  
+7777777777777777$$$$$$$$$$$$$.========= 
+77777777777777$$$$$$$$$$$$$$$.========= 
+777777777777$$$$$$$$$$$$$$$$ :========+.
+77777777777$$$$$$$$$$$$$$+..=========++~
+777777777$$..~=====================+++++
+77777777$~.~~~~=~=================+++++.
+777777$$$.~~~===================+++++++.
+77777$$$$.~~==================++++++++: 
+ 7$$$$$$$.==================++++++++++. 
+ .,$$$$$$.================++++++++++~.  
+         .=========~.........           
+         .=============++++++           
+         .===========+++..+++           
+         .==========+++.  .++           
+          ,=======++++++,,++,           
+          ..=====+++++++++=.            
+                ..~+=...
+"""
+# Credit: https://gist.github.com/xero
+
 
 # Single quotes work too
 '''
