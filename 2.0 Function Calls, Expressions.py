@@ -14,14 +14,45 @@
 # https://docs.python.org/3/library/functions.html The following are a few of
 # the built-ins available in Python
 
-# print() and type()
-# We have seen these already!
+##########
+# type() |
+##########
+# We've seen this one already.
+
+###########
+# print() #
+###########
+# This one too. But there's more to this one.
 # It is worth noting that print() can take many inputs at the same time!
 # All you have to do is seperate the inputs using commas and it will print all inputs with spaces in between
 
 # EXAMPLE
 x = "can"
 print("print()", x, "take many inputs")
+
+######################
+# GETTING USER INPUT #
+######################
+# We use input() function to ask for input data from the keyboard.
+
+# input(prompt): Displays the prompt string and waits for the user to enter one
+# line of input text in the terminal. The remaining code will not run until
+# this input is entered. The function returns the text entered by user as a
+# string, which can be stored in a variable.
+
+number = input("Credit card number now: ")
+
+print("I will buy illegal drugs using the credit card with number: ", number)
+
+# Despite entering a number, all input recieved from the Python shell is of
+# type string. Thus, if we wish to perform some sort of mathematical operation
+# on said input, we must convert it to a float or int
+
+number = int(number)
+
+print("I will purchase ", number * 2, " percocets and consume them immediately")
+
+# for legal reasons this is a joke
 
 ##########################
 # MATHEMATICAL FUNCTIONS #
@@ -70,30 +101,6 @@ print(str(age), str(sex))
 # len() wants a string. If you wanted to count the number of digits in some number,
 # you could get around this doing len(str(1234)). This turns 1234 into a string
 # so that len() can count it easily.
-
-######################
-# GETTING USER INPUT #
-######################
-# We use input() function to ask for input data from the keyboard.
-
-# input(prompt): Displays the prompt string and waits for the user to enter one
-# line of input text in the terminal. The remaining code will not run until
-# this input is entered. The function returns the text entered by user as a
-# string, which can be stored in a variable.
-
-number = input("Credit card number now: ")
-
-print("I will buy illegal drugs using the credit card with number: ", number)
-
-# Despite entering a number, all input recieved from the Python shell is of
-# type string. Thus, if we wish to perform some sort of mathematical operation
-# on said input, we must convert it to a float or int
-
-number = int(number)
-
-print("I will purchase ", number * 2, " percocets and consume them immediately")
-
-# for legal reasons this is a joke
 
 ########################
 # FUNCTION COMPOSITION #
