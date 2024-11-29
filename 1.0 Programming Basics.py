@@ -120,12 +120,12 @@ try: # *
          price = 100
          currency = "USD"
          print(price + currency) 
-except Exception as the_consequences_of_the_above_actions: # **
-         print(str(the_consequences_of_the_above_actions)) # ***
+except Exception as the_consequences_of_my_actions: # **
+         print(str(the_consequences_of_my_actions)) # ***
 # *: What you're seeing is called a try-except block. It's a tool that allows
 # you to execute potentially error-prone code and deal with the consequences.
 
-# **: The consequences in this instance is a:
+# **: The consequence in this instance is a:
 #          TypeError: unsupported operand type(s) for +: 'int' and 'str'
 # Python does not allow this.
 
