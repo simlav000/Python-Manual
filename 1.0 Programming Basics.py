@@ -12,9 +12,14 @@ minutes = duration // 60 # Integer division, basically divide by 60 and round th
 seconds = duration % 60  # Modulus operator, gives the remainder of the above division operation.
 print(duration, "seconds equal", minutes, "minutes and", seconds, "seconds.")
 
+# The modulus operator is often used describe things that loop back on themselves.
+# A clock loops back around after 12 hours. The days loop back after 365 days. Pac-man loops
+# around to the other side of the level. etc.
+
 # For all operators (except divison / and integer division //):
-# * If one or more of the operands are of type "float" the resulting value will also have type "float"
-# * If both operands are of type int, result will be of type int
+# 1) If one or more of the operands are of type "float" the resulting value will also have type "float"
+# 2) If both operands are of type int, result will be of type int
+# It keeps as much precision as it can.
 
 # For division operator /:
 # * The result value is always of type "float"
@@ -22,18 +27,20 @@ print(duration, "seconds equal", minutes, "minutes and", seconds, "seconds.")
 # For integer divisioin //:
 # * The result is always an "int"
 
-# Here we can see these rules in action
+# Here we can see this play out for multiplication as well:
 x = 3
 y = 9
 z = 9.0
 a = x*y
 b = x*z
-print(x*y)
-print(type(a))
-print(x*z)
-print(type(b))
+print(a) # > 27
+print(type(a)) # > <class 'int'>
+print(b) # 27.0
+print(type(b)) # > <class 'float'>
 
-# BASIC STRING OPERATIONS
+###########################
+# BASIC STRING OPERATIONS #
+###########################
 # Strings are sequences of zero or more characters.
 # In Python, strings are enclosed by either single or double quotes.
 
@@ -127,7 +134,7 @@ except Exception as the_consequences_of_my_actions: # **
 
 # **: The consequence in this instance is a:
 #          TypeError: unsupported operand type(s) for +: 'int' and 'str'
-# Python does not allow this.
+# Run the file to see this print out and not crash. 
 
 # ***: Doing `str(price) + currency` is the proper way to do the above. 
 
