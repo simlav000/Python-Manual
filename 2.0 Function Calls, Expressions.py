@@ -2,11 +2,13 @@
 # FUNCTION CALLS #
 ##################
 
-# Functions take zero or more input values, perform an action or computation,
-# and return the result (if any).
+# Functions take zero or more input values. They may return something. They may
+# also have some "effect" on "objects".
+
 # A function call looks like this:
-# function_name(argument_1, argument_2, ..., argument_n)
-# The number of arguments required by a function depends on how it was implemented.
+# func_name(arg_1, arg_2, ..., arg_n)
+# Recall: arguments are passed to functions.
+# The number of arguments required by a function depends on its implementation.
 
 # When it comes to built-in functions, it is often required to read
 # documentation to know how a function is expected to be used. Here's a handy
@@ -15,7 +17,7 @@
 # the built-ins available in Python
 
 ##########
-# type() |
+# type() #
 ##########
 # We've seen this one already.
 
@@ -23,7 +25,7 @@
 # print() #
 ###########
 # This one too. But there's more to this one.
-# It is worth noting that print() can take many inputs at the same time!
+# It is worth noting that print() can take many inputs at the same time.
 # All you have to do is seperate the inputs using commas and it will print
 # all inputs with spaces in between
 
@@ -42,6 +44,8 @@ print("print()", x, "take many inputs")
 # string, which can be stored in a variable.
 
 number = input("Entrust me with you credit card number: ")
+# Notice how input returns something, and we can catch it with the number
+# variable.
 
 # We have to be careful not to run away with this number as it isn't a true number
 # just yet. It's a string. Users can only ever give us strings. It is our
@@ -49,7 +53,7 @@ number = input("Entrust me with you credit card number: ")
 
 number = int(number)
 
-print(f"Current Bank Balance: ${number * -4}.00")
+print(f"Current Bank Balance: {number * -4}.00 $")
 
 ##########################
 # MATHEMATICAL FUNCTIONS #
@@ -123,7 +127,16 @@ print(x, y, z)
 
 # We can use function composition to simplify the above percocets code
 number = int(input("Credit card number again hurry now: "))
-print("I will purchase ", number * 2, " explosives from the explosives store")
+print(fr"""Current Bank Balance: {number * 1200}.00 $ 
+    /$$$$$  /$$$$$$   /$$$$$$  /$$   /$$ /$$$$$$$   /$$$$$$  /$$$$$$$$
+   |__  $$ /$$__  $$ /$$__  $$| $$  /$$/| $$__  $$ /$$__  $$|__  $$__/
+      | $$| $$  \ $$| $$  \__/| $$ /$$/ | $$  \ $$| $$  \ $$   | $$
+      | $$| $$$$$$$$| $$      | $$$$$/  | $$$$$$$/| $$  | $$   | $$
+ /$$  | $$| $$__  $$| $$      | $$  $$  | $$____/ | $$  | $$   | $$
+| $$  | $$| $$  | $$| $$    $$| $$\  $$ | $$      | $$  | $$   | $$
+|  $$$$$$/| $$  | $$|  $$$$$$/| $$ \  $$| $$      |  $$$$$$/   | $$
+ \______/ |__/  |__/ \______/ |__/  \__/|__/       \______/    |__/
+""")
 
 # This will only work if we trust our user enough to actually input an int!
 # Otherwise this all goes to shit, since we have already seen that the int
