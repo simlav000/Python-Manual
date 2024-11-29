@@ -64,7 +64,7 @@ fname = r"\home\usr\Simon\Music\MoBamba.flac"
 # double up on r and f out front a string to get all those features!
 
 #####################
-# ESCAPE CHARACTERS #
+# GIFTED CHARACTERS #
 #####################
 # TODO: If you're reading this, email me and tell me to do this. 
 
