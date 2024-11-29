@@ -16,22 +16,52 @@
 # https://docs.python.org/3/library/functions.html The following are a few of
 # the built-ins available in Python
 
+##############################
+# KEYWORD ARGUMENTS (KWARGS) #
+##############################
+
+# Functions in Python can have what we call "Keyword arguments". They are
+# like normal arguments we give to functions, but they already have a special
+# name associated with them. This means we need to know their names to use them
+# in the first place, meaning we must RTFM (read the fucking manual). The 
+# familiar print() function has a special keyword argument called "sep", which
+# specifies the separation between things it is printing. Using " uhh " as
+# separator:
+
+print("I", "know", "how", "to" ,"do", "CPR", sep=" uhh ")
+
+# Keyword arguments must always come after the regular arguments (which we call
+# positional arguments). They are sometimes optional, in which case they are 
+# designed to have an implicit default value. It is again up to you to read up
+# on what these defaults are, but I'll show you a few of them.
+
+# For print, the default separation is the empty string ("")
+print("No", "space", sep="")
+# You can make the separation any string you want.
+
+# We can change the "end" character using another one of print()'s keyword
+# arguments.
+print("A sequence of numbers:")
+print(1, end=", ")
+print(4, end=", ")
+print(9, end=", ")
+# Notice how these get printed on the same line.
+# We used to skip a line for every print statement. This was the "end"
+# argument's default value's job. This default value is the special character
+# "\n" (yes, both the slash and the n are grouped into a single character).
+# This is called the "newline character" and it's a special one. "\n" gets 
+# interpreted as a signal which forces a line break.
+
+# These do the same thing (print an empty line)
+print(end="\n")
+print()
+
+print(end="\n")
+
 ##########
 # type() #
 ##########
 # We've seen this one already.
-
-###########
-# print() #
-###########
-# This one too. But there's more to this one.
-# It is worth noting that print() can take many inputs at the same time.
-# All you have to do is seperate the inputs using commas and it will print
-# all inputs with spaces in between
-
-# EXAMPLE
-x = "can"
-print("print()", x, "take many inputs")
 
 ###########
 # input() #
