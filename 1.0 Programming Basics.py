@@ -113,9 +113,23 @@ print(message_2) #Hello Alice
 string = "1" + "2" + "3"
 print(string) #123
 
-# Addition like this is undefined
-price = 100
-print(price + "USD") #TypeError: unsupported operand type(s) for +: 'int' and 'str'
+# You can't add strings to ints
+
+
+try: # *
+         price = 100
+         currency = "USD"
+         print(price + currency) 
+except Exception as the_consequences_of_the_above_actions: # **
+         print(str(the_consequences_of_the_above_actions)) # ***
+# *: What you're seeing is called a try-except block. It's a tool that allows
+# you to execute potentially error-prone code and deal with the consequences.
+
+# **: The consequences in this instance is a:
+#          TypeError: unsupported operand type(s) for +: 'int' and 'str'
+# Python does not allow this.
+
+# ***: Doing `str(price) + currency` is the proper way to do the above. 
 
 #####################
 # STRING REPETITION #
@@ -124,11 +138,11 @@ print(price + "USD") #TypeError: unsupported operand type(s) for +: 'int' and 's
 # Strings can be repeated multiple times using * operator
 print("Rats? Rats make me crazy, I was in a room once, a rubber room. A rubber room with rats. " * 20)
 
-#######################
-# THE LENGTH FUNCTION #
-#######################
+#########
+# len() |
+#########
 
-# the function len() returns length of its argument string.
+# The len() function returns length of its argument string.
 
 password = "xyz123"
 # terrible password btw
