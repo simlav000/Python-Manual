@@ -63,12 +63,13 @@ print("Hello World!")
     # Integers: 0, 1, 2, ...
         # These are the whole numbers (including the negatives). We call these "int"
     # Floats: 1.3212, 9.8, 1.0, ...
-        # This is any number having a decimal point. Note that 1 is an int, but 1.0 is a "float"
+        # This is any number having a decimal point. Note that 1 is an int, but 1.0 is a float
     # Strings:
-        # This is literally any sequence of characters surrounded by quotes. Therefore, "1" is not an int! It's a float. So is "kys"
+        # This is literally any sequence of characters surrounded by quotes. Therefore, "1" is not an int! It's a string. 
+        # So is "keep yourself safe"
     
 # Of course, there exists more types out there, but we'll take the time to properly introduce them later.
-# In order to start playing around with types, let us introduce the concept of a "variable"
+# In order to start playing around with types, let us introduce the concept of a variable
 
 #############
 # VARIABLES #
@@ -184,3 +185,4 @@ print(x)
 
     
         
+
