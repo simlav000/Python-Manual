@@ -187,13 +187,14 @@ except Exception as thats_not_a_number:
 
 
 # This will only work if we trust our user enough to actually input an int!
-# Otherwise this all goes to shit, since we have already seen that the int
+# Otherwise this all fails, since we have already seen that the int
 # function breaks down when you give it a float or a string containing invalid
 # characters
 
 # NOTE: It is recommended to "comment out" lines 57 and 91 (the ones that use
-# the input() function) so that you don't need to keep entering your beatufil
+# the input() function) so that you don't need to keep entering your beautiful
 # credit card number every time you run this file. Comments are what I've been
 # typing in this whole time btw. They are lines of plain text that do not run.
 # You can "disable" lines of code by slapping a hashtag at the beginnning of
 # the line.
+
