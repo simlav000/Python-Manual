@@ -21,16 +21,16 @@
 ##############################
 
 # Functions in Python can have what we call "Keyword arguments" (KWARGS). They
-# are like normal arguments we give to functions, but they already have a 
-# special name associated with them. This means we need to know their names to 
-# use them in the first place, so we have to "read documentation". 
+# are like normal arguments we give to functions, but they already have a
+# special name associated with them. This means we need to know their names to
+# use them in the first place, so we have to "read documentation".
 
 # The familiar print() function has a special keyword argument called "sep",
-# which specifies the separation between things it is printing. 
+# which specifies the separation between things it is printing.
 print("time", "money", sep=" = ")
 
 # Keyword arguments must always come after the regular arguments (which we call
-# positional arguments). KWARGS are sometimes optional, in which case they are 
+# positional arguments). KWARGS are sometimes optional, in which case they are
 # designed to have an implicit default value. It is again up to you to read up
 # on what these defaults are, but I'll show you a few of them.
 
@@ -48,7 +48,7 @@ print(9, end=", ")
 # We used to skip a line for every print statement. This was the "end"
 # argument's default value's job. This default value is the special character
 # "\n" (yes, both the slash and the n are grouped into a single character).
-# This is called the "newline character" and it's a special one. "\n" gets 
+# This is called the "newline character" and it's a special one. "\n" gets
 # interpreted as a signal which forces a line break.
 
 # These do the same thing (print an empty line)
@@ -65,7 +65,7 @@ print()
 # We use the input() function to ask for input data from the keyboard.
 
 # input(prompt):
-# prompt is a string. 
+# prompt is a string.
 # Displays the prompt string and waits for the user to enter one
 # line of input text in the terminal. The remaining code will not run until
 # this input is entered. The function returns the text entered by user as a
@@ -95,11 +95,11 @@ print(f"Current Bank Balance: {number * -4}.00 $")
 
 # min() function takes 2 or more numbers and returns the minimum
 x = min(1, -4, 6)
-print(x) # -4
+print(x)  # -4
 
 # abs() function takes one number and returns the absolute value of the number
 y = abs(-6)
-print(y) # 6
+print(y)  # 6
 
 # round() function rounds a float.
 price = 101.61283
@@ -112,7 +112,7 @@ print(round(price, 3))
 # CONVERSION FUNCTIONS #
 ########################
 
-# Convert to integer using int() 
+# Convert to integer using int()
 # Convert a float to an integer. This has the side-effect of truncating the
 # fractional part of a floating point number
 price = 101.3213
@@ -142,7 +142,7 @@ print(str(age), str(teeth))
 ########################
 
 # I just did this. That's what len(str(1234)) is. Function composition is applying
-# or calling one function with the result of another. It can make things more 
+# or calling one function with the result of another. It can make things more
 # concise. Here are more examples:
 
 # Using intermediate variables
@@ -162,18 +162,20 @@ print(x, y, z)
 # We often do this when we want a number as input
 try:
     number = int(input("Credit card number again hurry now: "))
-    print(fr"""Current Bank Balance: {number * 1200}.00 $ 
-    /$$$$$  /$$$$$$   /$$$$$$  /$$   /$$ /$$$$$$$   /$$$$$$  /$$$$$$$$
-   |__  $$ /$$__  $$ /$$__  $$| $$  /$$/| $$__  $$ /$$__  $$|__  $$__/
-      | $$| $$  \ $$| $$  \__/| $$ /$$/ | $$  \ $$| $$  \ $$   | $$
-      | $$| $$$$$$$$| $$      | $$$$$/  | $$$$$$$/| $$  | $$   | $$
- /$$  | $$| $$__  $$| $$      | $$  $$  | $$____/ | $$  | $$   | $$
-| $$  | $$| $$  | $$| $$    $$| $$\  $$ | $$      | $$  | $$   | $$
-|  $$$$$$/| $$  | $$|  $$$$$$/| $$ \  $$| $$      |  $$$$$$/   | $$
- \______/ |__/  |__/ \______/ |__/  \__/|__/       \______/    |__/
-""")
+    print(fr"""Current Bank Balance: {number * 1200}.00 $
+=======
+        /$$$$$  /$$$$$$   /$$$$$$  /$$   /$$ /$$$$$$$   /$$$$$$  /$$$$$$$$
+       |__  $$ /$$__  $$ /$$__  $$| $$  /$$/| $$__  $$ /$$__  $$|__  $$__/
+          | $$| $$  \ $$| $$  \__/| $$ /$$/ | $$  \ $$| $$  \ $$   | $$
+          | $$| $$$$$$$$| $$      | $$$$$/  | $$$$$$$/| $$  | $$   | $$
+     /$$  | $$| $$__  $$| $$      | $$  $$  | $$____/ | $$  | $$   | $$
+    | $$  | $$| $$  | $$| $$    $$| $$\  $$ | $$      | $$  | $$   | $$
+    |  $$$$$$/| $$  | $$|  $$$$$$/| $$ \  $$| $$      |  $$$$$$/   | $$
+     \______/ |__/  |__/ \______/ |__/  \__/|__/       \______/    |__/
+    """)
 except Exception as thats_not_a_number:
-    print("""Too bad, you would've won the
+    print("""Too bad, you would've won the\n
+>>>>>>> 2176e91 (OOPI)
     /$$$$$  /$$$$$$   /$$$$$$  /$$   /$$ /$$$$$$$   /$$$$$$  /$$$$$$$$
    |__  $$ /$$__  $$ /$$__  $$| $$  /$$/| $$__  $$ /$$__  $$|__  $$__/
       | $$| $$  \ $$| $$  \__/| $$ /$$/ | $$  \ $$| $$  \ $$   | $$
@@ -183,7 +185,6 @@ except Exception as thats_not_a_number:
 |  $$$$$$/| $$  | $$|  $$$$$$/| $$ \  $$| $$      |  $$$$$$/   | $$
  \______/ |__/  |__/ \______/ |__/  \__/|__/       \______/    |__/
 """)
-    
 
 
 # This will only work if we trust our user enough to actually input an int!
@@ -198,3 +199,29 @@ except Exception as thats_not_a_number:
 # You can "disable" lines of code by slapping a hashtag at the beginnning of
 # the line.
 
+#####################################################################
+# ORDER OF OPERATIONS - PEMDAS (Please Excuse My Dark Ambient Swag) #
+#####################################################################
+
+# When an expression contains multiple operators, which one is applied first?
+# All Python operators have a PRECEDENCE and ASSOCIATIVITY:
+# Precedence - for two different kinds of operators, which is applied first?
+# Associativity - for two operators with the same precedence, which is first?
+
+# The following web page contains a handy table listing the hierarchy with some
+# examples: https://medium.com/@thoashook/operations-in-python-69bbbef781a4
+
+# Generally however, you don't need to memorize this.
+# I've not spoken much about this yet, but an immensely important facet of
+# programming is writing code that other people can actually read. The order of
+# operations from one programming language to another may or may not be the
+# same, but one thing is true for all of them: parentheses () have highest
+# precedence.
+
+# This means that instead of writing some garbage like "x = 12 //4 + 2 **4–5"
+# where only a Python developper who remembers the precedence of all operators
+# can understand, use parentheses to make clear what you are trying to do
+
+x = (12 // 4) + (2 ** 4) - 5
+print(x)
+>>>>>> > 2176e91 (OOPI)
